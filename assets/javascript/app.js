@@ -17,8 +17,10 @@ $(document).ready(function(){
 		})
 		.done(function(response){
 			for (i = 0; i < 9; i++){
-				$("#images").append("<a id='" + i + "'><img src=" + response.data[i].images.fixed_height_still.url + " data-playing=" + "'stopped'" +"></a>");
-				$("#images").append("<p>Rating: " + response.data[i].rating + "</p>");
+				var gameDiv = $("<div id=" + "'gifs'" + "></div>");
+				$("#images").append(gameDiv);
+				$(gameDiv).append("<a id='" + i + "'><img src=" + response.data[i].images.fixed_height_still.url + " data-playing=" + "'stopped'" +"></a>");
+				$(gameDiv).append("<p>Rating: " + response.data[i].rating + "</p>");
 			};
 			imageObject = response;
 		});
