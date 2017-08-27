@@ -16,7 +16,7 @@ $(document).ready(function(){
 			method: "get"
 		})
 		.done(function(response){
-			for (i = 0; i < 9; i++){
+			for (i = 0; i < 10; i++){
 				var gameDiv = $("<div id=" + "'gifs'" + "></div>");
 				$("#images").append(gameDiv);
 				$(gameDiv).append("<a id='" + i + "'><img src=" + response.data[i].images.fixed_height_still.url + " data-playing=" + "'stopped'" +"></a>");
