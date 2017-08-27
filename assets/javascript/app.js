@@ -9,8 +9,8 @@ $(document).ready(function(){
 		$("#buttons").append("<button id=" + "'printedButtons'" + ">" + topics[i] + "</button>");
 	}
 	$(document).on("click", "#printedButtons", function(){
-		selectedButton = $(this).text();
 		$("#images").empty();
+		selectedButton = $(this).text();
 		$.ajax({
 			url: "https://api.giphy.com/v1/gifs/search?api_key=c5039a1247684d6e9d3eb780a5db6673&q=" + selectedButton + "&limit=10&offset=0&rating=G&lang=en",
 			method: "get"
